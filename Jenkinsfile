@@ -26,16 +26,14 @@ pipeline {
         stage('Unit tests') {
             steps {
                 echo "-=- execute unit tests -=-"
-                sh "mvn test"
-                junit 'target/surefire-reports/*.xml'
-                jacoco execPattern: 'target/jacoco.exec'
+                echo "no tests in DTOs project"
             }
         }
 
         stage('Mutation tests') {
             steps {
                 echo "-=- execute mutation tests -=-"
-                sh "mvn org.pitest:pitest-maven:mutationCoverage"
+                echo "no tests in DTOs project"
             }
         }
 
