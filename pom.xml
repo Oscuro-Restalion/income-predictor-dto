@@ -6,8 +6,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>income-predictor-dto</name>
 	<properties>
+		<!-- Java version -->
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		
+		<!-- Dependency check -->
+		<dependency-check.version>3.3.2</dependency-check.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -17,4 +21,19 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+            <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>${dependency-check.version}</version>
+                <configuration>
+                    <format>ALL</format>
+                    <!-- commenting build fail flag as this is an old
+                         and insecure version of Spring Pet Clinic -->
+                    <!-- <failBuildOnCVSS>5</failBuildOnCVSS> -->
+                </configuration>
+            </plugin>
+		</plugins>
+	</build>
 </project>
