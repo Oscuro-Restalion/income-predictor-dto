@@ -77,7 +77,7 @@ pipeline {
             steps {
                 echo "-=- run dependency vulnerability tests -=-"
                 sh "mvn dependency-check:check"
-                dependencyCheckPublisher failedTotalHigh: '30', unstableTotalHigh: '25', failedTotalNormal: '110', unstableTotalNormal: '100'
+                //dependencyCheckPublisher failedTotalHigh: '30', unstableTotalHigh: '25', failedTotalNormal: '110', unstableTotalNormal: '100'
             }
         }
 
@@ -102,7 +102,8 @@ pipeline {
         stage('Push Docker image') {
             steps {
                 echo "-=- push Docker image -=-"
-                echo "Not an executable project so no Docker image needed"
+                echo "Not an executable project so no Docker image needed, anyway jar file need to be installed"
+                sh "mvn install"
             }
         }
     }
