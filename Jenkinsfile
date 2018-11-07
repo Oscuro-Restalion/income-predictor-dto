@@ -48,14 +48,14 @@ pipeline {
         stage('Build Docker image') {
             steps {
                 echo "-=- build Docker image -=-"
-                echo "Not an executable project so no Docker image needed"
+                echo "Not an executable project so no Docker image build is needed"
             }
         }
 
         stage('Run Docker image') {
             steps {
                 echo "-=- run Docker image -=-"
-                echo "Not an executable project so no Docker image run needed"
+                echo "Not an executable project so no Docker image run is needed"
             }
         }
 
