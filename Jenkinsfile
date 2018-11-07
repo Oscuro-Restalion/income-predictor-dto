@@ -80,9 +80,9 @@ pipeline {
             }
         }
 
-        stage('Push Docker image') {
+        stage('Push Artifact') {
             steps {
-                echo "-=- push Docker image -=-"
+                echo "-=- push Artifact -=-"
                 echo "Not an executable project so no Docker image needed, anyway jar file need to be installed"
                 sh "mvn install"
             }
