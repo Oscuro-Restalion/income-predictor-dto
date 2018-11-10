@@ -5,6 +5,12 @@ The aim of this project is provide a common interface to be utilized in communic
 
 You can find more info about the main project in [microservices-ml page](https://github.com/Oscuro-Restalion/microservices-ml)
 
+This project includes all Data Transfer Objects needed in the solution, it also includes all the types needed to process the input file.
+
+## Classes
+
+![alt income-predictor-dto project class diagram](https://github.com/Oscuro-Restalion/income-predictor-dto/blob/master/images/DTO-Diagram.png)
+
 ## Quick Start
 
 This section can help you to compile the project without a deep knowledge of the different technologies used. Please follow the instructions and PR if more information is needed.
