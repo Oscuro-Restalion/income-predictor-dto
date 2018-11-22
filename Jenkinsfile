@@ -38,34 +38,6 @@ pipeline {
             }
         }
 
-        stage('Build Docker image') {
-            steps {
-                echo "-=- build Docker image -=-"
-                echo "Not an executable project so no Docker image build is needed"
-            }
-        }
-
-        stage('Run Docker image') {
-            steps {
-                echo "-=- run Docker image -=-"
-                echo "Not an executable project so no Docker image run is needed"
-            }
-        }
-
-        stage('Integration tests') {
-            steps {
-                echo "-=- execute integration tests -=-"
-                echo "Not an executable project so no integration test phase needed"
-            }
-        }
-
-        stage('Performance tests') {
-            steps {
-                echo "-=- execute performance tests -=-"
-                echo "Not an executable project so no performance test phase needed"
-            }
-        }
-
         stage('Dependency vulnerability tests') {
             steps {
                 echo "-=- run dependency vulnerability tests -=-"
@@ -79,13 +51,6 @@ pipeline {
                 echo "Not an executable project so no Docker image needed, anyway jar file need to be installed"
                 sh "mvn install"
             }
-        }
-    }
-
-    post {
-        always {
-            echo "-=- remove deployment -=-"
-            echo "Not an executable project so no Docker image needed"
         }
     }
 }
